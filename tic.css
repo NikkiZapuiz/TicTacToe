@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: azure ;
+}
+
+#Tic {
+    color: #F9E076;
+    font-weight: 400;
+    
+}
+#Tac {
+    color: #949B9C;
+    font-weight: 550;
+}
+#Toe {
+    color: #EDABEF;
+    font-weight: 400;
+}
+
+
+
+.animated-text span {
+    display: inline-block;
+    -webkit-animation: wave 1s ease-in-out infinite;
+            animation: wave 1s ease-in-out infinite;
+}
+
+.animated-text span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+}
+.animated-text span:nth-of-type(2) {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+}
+.animated-text span:nth-of-type(3) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+}
+.animated-text span:nth-of-type(4) {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+}
+.animated-text span:nth-of-type(5) {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+}
+
+@-webkit-keyframes wave {
+    00% {
+    transform: translateY(0em);
+    }
+    60% {
+    transform: translateY(-0.6em);
+    }
+    100% {
+    transform: translateY(0em);
+    }
+}
+
+@keyframes wave {
+    00% {
+    transform: translateY(0em);
+    }
+    60% {
+    transform: translateY(-0.6em);
+    }
+    100% {
+    transform: translateY(0em);
+    }
+}
+
+
+#board {
+    width: 300px;
+    height: 300px;
+    background-color: #949B9C;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    border: solid 2px azure;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.cross {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    transform: rotate(45deg);
+    
+}
+
+.cross:before, .cross::after {
+    content: "";
+    position:absolute;
+    background-color: #F9E076;
+}
+
+.cross:before {
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+}
+
+.cross:after {
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    margin-top: 3px;
+    border-radius: 50%;
+    border: 15px solid #EDABEF;
+}
+
+#description {
+    color: gray;
+}
+
+#startButton {
+    border-radius: 100%;
+    background-color: azure;
+
+}
+
+#start {
+    color: #949B9C;
+}
+
+#game {
+    color: #949B9C;
+}
+#submitNameButton {
+    border-radius: 100%;
+    background-color: azure;
+    color: #949B9C;
+}
+
+
+#startButton:hover {
+    background-color: #F9E076;
+}
+
+#submitNameButton:hover {
+    background-color: #F9E076;
+}
+
+#playerNameInput {
+    background-color: azure;
+}
